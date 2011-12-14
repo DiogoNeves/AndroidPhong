@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SimpleLight</string>
+    <string name="gl_error_message">You need GL ES 2.0 to run this demo</string>
+
+</resources>
