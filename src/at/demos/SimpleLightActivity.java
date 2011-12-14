@@ -74,7 +74,7 @@ class SimpleLightView extends GLSurfaceView {
 
     @Override public boolean onTrackballEvent(MotionEvent e) {
         mRenderer.mAngleX += e.getX() * TRACKBALL_SCALE_FACTOR;
-        mRenderer.mAngleY += e.getY() * TRACKBALL_SCALE_FACTOR;
+        mRenderer.mAngleY -= e.getY() * TRACKBALL_SCALE_FACTOR;
         
         return true;
     }
@@ -85,7 +85,7 @@ class SimpleLightView extends GLSurfaceView {
         switch (e.getAction()) {
         case MotionEvent.ACTION_MOVE:
             mRenderer.mAngleX += (x - mPreviousX) * TOUCH_SCALE_FACTOR;
-            mRenderer.mAngleY += (y - mPreviousY) * TOUCH_SCALE_FACTOR;
+            mRenderer.mAngleY -= (y - mPreviousY) * TOUCH_SCALE_FACTOR;
         }
         mPreviousX = x;
         mPreviousY = y;
